@@ -18,19 +18,20 @@ const Cardslider = ({ data, navigation }) => {
                         <View style={styles.card}>
                             <View style={styles.s1}>
                                 <Image source={{
-                                    uri: item.storeImageUrl
+                                    uri: item.pfp
                                 }} style={styles.cardimgin} />
                             </View>
                             <View style={styles.s2}>
-                                <Text style={styles.txt1}>{item.storeName}</Text>
+                                <Text style={styles.txt1}>{item.shopName}</Text>
                                 <View style={styles.s2in}>
                                     {/* <Text style={styles.txt2}>Rs.{item.foodPrice}/-</Text> */}
                                     {item.storeType == 'mall' ? <Text>Mall</Text> : <Text>Shop</Text>}
                                 </View>
+                                <Text style={styles.txt1}>{item.shopAddr}</Text>
                             </View>
                             <View style={styles.s3}>
                                 <Text style={styles.buybtn}>
-                                    Buy
+                                    Shop
                                 </Text>
                             </View>
                         </View>

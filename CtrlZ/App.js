@@ -1,18 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import HomeScreen from './screens/HomeScreen';
+import React from 'react';
+import { AuthProvider } from './AuthProvider';
+import AppNavigator from './AppNavigator';
 
-export default function App() {
+const App = () => {
   return (
-    <HomeScreen />
+    <AuthProvider>
+      <AppNavigator />
+    </AuthProvider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
